@@ -20,7 +20,7 @@ export default function View() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const postFiles = import.meta.glob("/post/*.md", {
+        const postFiles = import.meta.glob("/public/post/*.md", {
           query: "?raw",
           import: "default",
         });
@@ -63,7 +63,7 @@ export default function View() {
       <div className="view-contents">
         <Routes>
           <Route index element={<Home posts={posts} />} />
-          <Route path="/post/:slug" element={<Contents keywords={posts} />} />
+          <Route path="/public/post/:slug" element={<Contents />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>

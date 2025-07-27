@@ -133,5 +133,3 @@ console.log(hello.greet === hi.greet); // true
   > (원시 타입과 객체 타입에 대해 더 이해하기) 주소 명시할 것.
 
 #### 리액트에서의 동등비교
-
--

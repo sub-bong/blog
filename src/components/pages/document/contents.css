@@ -93,6 +93,7 @@
 
 .text-box .text-markdown-box p {
   margin: 1% 0;
+  line-height: 1.2rem;
 }
 
 .text-box .text-markdown-box strong {
@@ -121,7 +122,6 @@
   font-weight: bold;
   font-size: 0.8rem;
   background-color: #eadfdf;
-  border-left: 4px solid #f2aa4c;
   color: #101820;
   padding: 0.4%;
 }
@@ -137,13 +137,13 @@
   font-size: 1.1rem;
   font-weight: 500;
   padding: 10px;
-  text-align: left;
+  line-height: 1.1rem;
 }
 
 .text-box .text-markdown-box table td {
   padding: 10px;
-  text-align: left;
   font-weight: 300;
+  line-height: 1.1rem;
 }
 
 .text-box .text-markdown-box table thead {

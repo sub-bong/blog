@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 import "./contents.css";
 
 /*
-md title  
+md file header  
 ---
 title: "제목"
 date: "2025-07-21"
@@ -23,11 +23,7 @@ interface PostData {
   content: string;
 }
 
-type PostListProps = {
-  keywords: PostData[];
-};
-
-export default function Contents({ keywords }: PostListProps) {
+export default function Contents() {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<PostData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -38,7 +34,7 @@ export default function Contents({ keywords }: PostListProps) {
 
     const fetchPost = async () => {
       try {
-        const postModule = await import(`/post/${slug}.md?raw`);
+        const postModule = await import(`/public/post/${slug}.md?raw`);
         const rawContent = postModule.default;
         const { data, content } = matter(rawContent);
 
@@ -74,8 +70,8 @@ export default function Contents({ keywords }: PostListProps) {
         <span>게시일:</span> {post.date}
       </p>
       <div className="text-keywords">
-        {keywords.map((keyword) => (
-          <span>{keyword.keywords}</span>
+        {post.keywords.map((keyword) => (
+          <span key={keyword}>{keyword}</span>
         ))}
       </div>
       <div className="text-markdown-box">
@@ -109,7 +105,7 @@ export default function Contents({ keywords }: PostListProps) {
               return (
                 <div className="text-img">
                   <img
-                    src={props.src?.replace("../../../../post/imgs/", "/")}
+                    src={props.src?.replace("/public/post/imgs/", "/")}
                     alt="image"
                   />
                 </div>
