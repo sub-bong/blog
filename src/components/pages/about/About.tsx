@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="about-contents">
       <div className="about-item">
-        <img src="/public/img/meerkat_doing.gif" title="something doing..." />
+        <img src="/img/meerkat_doing.gif" title="something doing..." />
       </div>
       <div className="about-item">
         <h2>My Stack</h2>

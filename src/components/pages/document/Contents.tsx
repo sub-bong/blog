@@ -34,8 +34,8 @@ export default function Contents() {
 
     const fetchPost = async () => {
       try {
-        const postModule = await import(`/public/post/${slug}.md?raw`);
-        const rawContent = postModule.default;
+        const postModule = await fetch(`/post/${slug}.md`);
+        const rawContent = await postModule.text();
         const { data, content } = matter(rawContent);
 
         setPost({
@@ -105,7 +105,7 @@ export default function Contents() {
               return (
                 <div className="text-img">
                   <img
-                    src={props.src?.replace("/public/post/imgs/", "/")}
+                    src={props.src?.replace("./post/imgs/", "/")}
                     alt="image"
                   />
                 </div>

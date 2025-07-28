@@ -63,7 +63,7 @@ export default function View() {
       <div className="view-contents">
         <Routes>
           <Route index element={<Home posts={posts} />} />
-          <Route path="/public/post/:slug" element={<Contents />} />
+          <Route path="/post/:slug" element={<Contents />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>

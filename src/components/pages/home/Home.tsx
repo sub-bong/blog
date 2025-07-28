@@ -24,7 +24,7 @@ export default function Home({ posts }: PostListProps) {
         <ul className="home-items-view">
           {posts.map((post) => (
             <li key={post.slug}>
-              <a href={`/public/post/${post.slug}`}>
+              <a href={`/post/${post.slug}`}>
                 <h2>{post.title}</h2>
               </a>
               <div>

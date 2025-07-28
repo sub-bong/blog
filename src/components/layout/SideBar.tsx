@@ -46,7 +46,7 @@ export default function SideBar() {
     <section className="side-container" ref={navRef}>
       <div className="side-contents" ref={contentRef}>
         <div className="side-item">
-          <img src="/public/img/meerkat_doing.jpg" title="something doing..." />
+          <img src="/img/meerkat_doing.jpg" title="something doing..." />
         </div>
         <div className="side-item">
           <h3>Sub Bong Lab</h3>
