@@ -24,8 +24,8 @@ export default function SideBar() {
             duration: 0.2,
           })
           .to(navRef.current, {
-            width: "60px",
-            height: "60px",
+            width: "40px",
+            height: "40px",
           });
       }
 

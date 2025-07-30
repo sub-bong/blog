@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { useParams } from "react-router";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { monokaiSublime } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkGfm from "remark-gfm";
 import "./contents.css";
 
@@ -83,7 +83,7 @@ export default function Contents() {
               const match = /language-(\w+)/.exec(className || "");
               return match ? (
                 <SyntaxHighlighter
-                  style={monokaiSublime}
+                  style={oneDark}
                   language={match[1]}
                   PreTag="div"
                 >
@@ -93,7 +93,11 @@ export default function Contents() {
                     .replace(/\n&nbsp\n/g, "")}
                 </SyntaxHighlighter>
               ) : (
-                <SyntaxHighlighter style={{}} PreTag="span">
+                <SyntaxHighlighter
+                  style={{}}
+                  PreTag="span"
+                  className="inline-code"
+                >
                   {String(children).replace(/\n$/, "")}
                 </SyntaxHighlighter>
               );

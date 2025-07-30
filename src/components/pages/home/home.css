@@ -86,3 +86,21 @@
   color: #fff;
   font-weight: 400;
 }
+
+@media (480px >= width) {
+  .home-all-title {
+    font-size: 2.2rem;
+  }
+  .home-items .home-items-view li a {
+    height: 8vh;
+  }
+  .home-items .home-items-view li a h2 {
+    font-size: 1.1rem;
+  }
+  .home-items .home-items-view li div p {
+    font-size: 0.5rem;
+  }
+  .home-items .home-items-view li div div span {
+    font-size: 0.4rem;
+  }
+}

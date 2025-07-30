@@ -1,9 +1,15 @@
+.text-box {
+  width: 100%;
+  word-break: keep-all;
+}
+
 .text-box .text-title {
   font-family: var(--font-en);
   font-size: 4rem;
   font-weight: 500;
   border-bottom: 2px solid #f2aa4c;
   margin: 2% 0;
+  padding: 2% 0;
 }
 
 .text-box .text-date {
@@ -63,16 +69,16 @@
 .text-box .text-markdown-box h4 {
   font-size: 1.5rem;
   font-weight: 200;
-  margin: 1.5% 0;
+  margin: 2% 0;
 }
 .text-box .text-markdown-box h5 {
   font-size: 1.2rem;
   font-weight: 200;
-  margin: 1.5% 0;
+  margin: 2% 0;
 }
 .text-box .text-markdown-box h6 {
   font-weight: 200;
-  margin: 1.5% 0;
+  margin: 2% 0;
 }
 
 .text-box .text-markdown-box blockquote {
@@ -88,16 +94,22 @@
 }
 
 .text-box .text-markdown-box pre div {
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 .text-box .text-markdown-box p {
   margin: 1% 0;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
 }
 
 .text-box .text-markdown-box strong {
   font-weight: bold;
+}
+
+.text-box .text-markdown-box hr {
+  border: 1.5px solid #f2aa4c;
+  border-radius: 1.5px;
+  opacity: 0.4;
 }
 
 .text-box .text-markdown-box ul {
@@ -106,7 +118,8 @@
 }
 
 .text-box .text-markdown-box ul li {
-  margin: 1% 0;
+  margin: 1.2% 0;
+  line-height: 1.1rem;
 }
 
 .text-box .text-markdown-box ol {
@@ -115,15 +128,22 @@
 }
 
 .text-box .text-markdown-box ol li {
-  margin: 1% 0;
+  margin: 1.2% 0;
 }
 
-.text-box .text-markdown-box span code span {
+.text-box .text-markdown-box .inline-code {
+  background-color: transparent !important;
+}
+
+.text-box .text-markdown-box .inline-code code span {
   font-weight: bold;
   font-size: 0.8rem;
   background-color: #eadfdf;
   color: #101820;
-  padding: 0.4%;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  padding: 0.2%;
+  margin: 0.4%;
 }
 
 .text-box .text-markdown-box table {
@@ -131,13 +151,13 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   overflow: hidden;
-  margin: 2% 0;
+  margin: 4% 0;
 }
 .text-box .text-markdown-box table th {
   font-size: 1.1rem;
   font-weight: 500;
   padding: 10px;
-  line-height: 1.1rem;
+  line-height: 1.2rem;
 }
 
 .text-box .text-markdown-box table td {
@@ -158,4 +178,66 @@
 .text-box .text-markdown-box .text-img img {
   width: 80vh;
   margin: 2.5% 0;
+}
+
+@media (480px >= width) {
+  .text-box {
+    font-size: 0.7rem;
+  }
+  .text-box .text-title {
+    font-size: 1.5rem;
+  }
+  .text-box .text-date {
+    font-size: 1.2rem;
+  }
+  .text-box .text-date span {
+    font-size: 0.5rem;
+  }
+  .text-box .text-keywords span {
+    font-size: 0.7rem;
+  }
+  .text-box .text-markdown-box > strong {
+    font-size: 0.7rem;
+  }
+  .text-box .text-markdown-box ul p {
+    font-size: 0.8rem;
+  }
+  .text-box .text-markdown-box h1 {
+    font-size: 1.6rem;
+  }
+  .text-box .text-markdown-box h2 {
+    font-size: 1.4rem;
+  }
+  .text-box .text-markdown-box h3 {
+    font-size: 1.2rem;
+  }
+  .text-box .text-markdown-box h4 {
+    font-size: 1rem;
+  }
+  .text-box .text-markdown-box h5 {
+    font-size: 0.8rem;
+  }
+  .text-box .text-markdown-box h6 {
+    font-size: 0.5rem;
+  }
+  .text-box .text-markdown-box .inline-code code span {
+    font-size: 0.6rem;
+  }
+  .text-box .text-markdown-box table {
+    margin: 4% auto;
+  }
+  .text-box .text-markdown-box table th {
+    font-size: 0.6rem;
+  }
+  .text-box .text-markdown-box table td {
+    font-size: 0.5rem;
+  }
+}
+
+.text-box img {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 100%;
+  border: 0.1rem solid #daa03d;
+  margin-top: 5%;
 }
