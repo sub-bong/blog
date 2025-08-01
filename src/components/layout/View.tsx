@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router";
 import Home from "../pages/home/Home";
 import About from "../pages/about/About";
 import Contents from "../pages/document/Contents";
+import Categories from "../pages/categories/Categories";
 
 interface PostMetadata {
   slug: string;
@@ -63,6 +64,10 @@ export default function View() {
       <div className="view-contents">
         <Routes>
           <Route index element={<Home posts={posts} />} />
+          <Route
+            element={<Categories posts={posts} />}
+            path="/categories/:keywords"
+          />
           <Route path="/post/:slug" element={<Contents />} />
           <Route path="/about" element={<About />} />
         </Routes>
